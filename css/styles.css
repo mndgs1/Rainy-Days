@@ -19,9 +19,11 @@ h1 {
   margin: 0;
 }
 
+.welcome {
+  margin: 0px 20px;
+}
 .cta {
-  display: block;
-  background-color: transparent;
+  display: inline-block;
   color: #fff;
   border-width: 3px;
   border-style: solid;
@@ -31,8 +33,6 @@ h1 {
   text-decoration: none;
   font-size: 20px;
   font-family: "Poppins";
-  max-width: 164px;
-  margin: auto;
   text-align: center;
 }
 
@@ -42,8 +42,42 @@ h1 {
 
 header {
   height: 40px;
-  display: flex;
   margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  margin-left: 25px;
+  display: none;
+  position: fixed;
+  top: 48px;
+  background: rgb(221, 221, 221);
+  z-index: 1000;
+  right: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #113340;
+}
+
+.active {
+  text-decoration: underline;
+}
+nav ul {
+  padding: 0px;
+  margin: 0px 10px;
+}
+
+nav li {
+  display: block;
+}
+
+nav a {
+  display: block;
+  padding: 10px 15px;
 }
 
 header .logo {
@@ -62,20 +96,50 @@ main {
   background-size: cover;
   position: relative;
 }
-footer .icons {
-  height: 20px;
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
 }
 
+footer a {
+  margin-left: px;
+}
 footer p {
   font-size: 0.7em;
-  margin: 0;
+  margin: 0px;
   display: inline-block;
 }
 
-a {
-  display: inline-block;
+#hamburger-menu {
+  display: none;
 }
 
-.social-media {
-  float: right;
+.fa-bars {
+  color: #113340;
+  margin-right: 10px;
+}
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+@media (min-width: 600px) {
+  nav {
+    display: block;
+    position: static;
+    background: none;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+  header label {
+    display: none;
+  }
+
+  nav a {
+  }
 }
