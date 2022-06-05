@@ -2,6 +2,9 @@
   font-family: "Poppins";
   src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap") format("truetype");
 }
+
+/* Shared */
+
 body {
   font-family: proxima-nova, sans-serif;
   font-weight: 400;
@@ -36,6 +39,11 @@ h1 {
   text-align: center;
 }
 
+.cta:hover {
+  color: #10171a;
+  background-color: #fff;
+}
+
 .icons {
   display: inline-block;
 }
@@ -48,12 +56,33 @@ header {
   justify-content: space-between;
 }
 
+header .logo {
+  display: inline-block;
+  height: 100%;
+}
+
+header .icons {
+  height: 28px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.fa-bars {
+  color: #113340;
+  margin-right: 10px;
+}
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
 nav {
   margin-left: 25px;
   display: none;
   position: fixed;
   top: 48px;
-  background: rgb(221, 221, 221);
+  background: #cfcfcf;
   z-index: 1000;
   right: 0px;
 }
@@ -80,23 +109,6 @@ nav a {
   padding: 10px 15px;
 }
 
-header .logo {
-  display: inline-block;
-  height: 100%;
-}
-
-header .icons {
-  height: 28px;
-}
-
-main {
-  background-image: url("/images/Background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
 footer {
   display: flex;
   align-items: center;
@@ -113,16 +125,13 @@ footer p {
   display: inline-block;
 }
 
-#hamburger-menu {
-  display: none;
-}
-
-.fa-bars {
-  color: #113340;
-  margin-right: 10px;
-}
-#hamburger-menu:checked ~ nav {
-  display: block;
+/* home */
+main {
+  background-image: url("/images/Background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 @media (min-width: 600px) {
@@ -138,8 +147,5 @@ footer p {
 
   header label {
     display: none;
-  }
-
-  nav a {
   }
 }
